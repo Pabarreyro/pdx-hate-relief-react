@@ -22,10 +22,13 @@ The initial motivation for **PDX Hate Relief** was to provide an outlet for vuln
 
 ## Migration issues
 
-* Forms seem to be considerably more complicated after cursory research.
-* Integrating bootstrap is a bit trickier
+* Forms seem more complicated after cursory research.
+* Integrating bootstrap downgraded to BS3.
 
 ## Meditations
+
+
+* Difficult bargain between creating slightly distinct features, requiring unique components, and repetitive design approaches that may not suite all configurations of media/copy/etc.
 
 * Rendering components
 
