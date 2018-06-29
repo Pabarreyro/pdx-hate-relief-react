@@ -17,6 +17,7 @@
     "react": "^15.6.2",
     "react-bootstrap": "^0.32.1",
     "react-dom": "^15.6.2",
+    "react-router-dom": "^4.0.0",
     "styled-jsx": "^2.2.7",
     "url-loader": "^0.6.2"
   },
