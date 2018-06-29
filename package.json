@@ -14,8 +14,9 @@
   "dependencies": {
     "file-loader": "^1.1.6",
     "prop-types": "^15.5.10",
-    "react": "^15.5.4",
-    "react-dom": "^15.5.4",
+    "react": "^15.6.2",
+    "react-bootstrap": "^0.32.1",
+    "react-dom": "^15.6.2",
     "styled-jsx": "^2.2.7",
     "url-loader": "^0.6.2"
   },
