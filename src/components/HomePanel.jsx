@@ -19,3 +19,5 @@ function HomePanel(props) {
     </Jumbotron>
   );
 }
+
+export default HomePanel;
