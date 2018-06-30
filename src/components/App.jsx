@@ -8,8 +8,12 @@ import Report from './Report';
 import Connect from './Connect';
 
 function App(){
+  var appStyle = {
+    backgroundColor: '#f1edec',
+    textAlign: 'center'
+  }
   return (
-    <div>
+    <div style={appStyle}>
       <Header/>
       <Switch>
         <Route exact path='/' component={Home} />
