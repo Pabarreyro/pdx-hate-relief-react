@@ -6,7 +6,7 @@ The initial motivation for **PDX Hate Relief** was to provide an outlet for vuln
 
 ## Component Tree
 
-![PDX Hate Relief Component Tree](https://drive.google.com/file/d/1BlYKIjC3A9ILiKuWyq_X4eHZfhUklxyw/view?usp=sharing)
+![PDX Hate Relief Component Tree](./PDX_Hate_Relief_React_Component_Tree.jpg)
 
 ## Getting Started
 
