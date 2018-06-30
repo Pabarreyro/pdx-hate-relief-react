@@ -20,21 +20,24 @@ The initial motivation for **PDX Hate Relief** was to provide an outlet for vuln
 * CSS
 * Webpack
 
-## Migration issues
-
-* Forms seem more complicated after cursory research.
-* Integrating bootstrap downgraded to BS3.
-
-## Meditations
-
-
-* Difficult bargain between creating slightly distinct features, requiring unique components, and repetitive design approaches that may not suite all configurations of media/copy/etc.
-
-* Rendering components
 
 ## Authors
 
 * **Pablo** - *Principal work* - [Pabarreyro](https://github.com/Pabarreyro)
+
+## Notes
+
+### Migration issues
+
+* Forms seem more complicated after cursory research. (_V0_)
+* Integrating bootstrap downgraded to BS3. (_V0_)
+* Difficult bargain between creating slightly distinct features, requiring unique components, and repetitive design approaches that may not suite all configurations of media/copy/etc. (_V0_)
+
+### React v Angular
+
+* React is much quicker at setting up an app with basic components (_V0_)
+* Manipulating style is less familiar with React (_V0_)
+* Embedding components seems like it will be easier with React (_V0_)
 
 ## License
 
