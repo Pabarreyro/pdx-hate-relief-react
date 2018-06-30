@@ -46,4 +46,5 @@ This project is licensed under the MIT License - see the [LICENSE.md](LICENSE.md
 ## Acknowledgments
 
 * Staff and fellow students for support and encouragement
-* [Inspiration]
+* [Portland United Against Hate](https://www.portlandoregon.gov/oni/72583
+), for the opportunity to apply my budding dev skills to as important an issues as this.
