@@ -1,7 +1,9 @@
 import React from 'react';
-import puahLogo from '../assets/images/puahlogo.jpg';
+import { Link } from 'react-router-dom';
+import { Col } from 'react-bootstrap';
 
 import HomePanel from './HomePanel';
+import puahLogo from '../assets/images/puah_logo.jpg';
 
 const homePanelCopy = [
   {
@@ -19,20 +21,21 @@ const homePanelCopy = [
 ]
 
 function Home() {
-  return {
-    <div>
+  return (
+    <Col md={12} sm={10} container={true}>
       <a href="https://www.portlandoregon.gov/oni/72583">
-        <img src={puahLogo} style={{height: 150, width: 150, margin: '-0.5rem auto 0.5rem auto', border-radius: '0.5rem'}}/>
+        <img src={puahLogo} style={{height: 150, width: 150, marginBottom: '2rem', borderRadius: '0.5rem'}}/>
       </a>
       { homePanelCopy.map((panel, i) =>
           <HomePanel
             heading={panel.heading}
             lead={panel.lead}
             action={panel.action}
-            actionRoute={panel.actionRoute}/>
+            actionRoute={panel.actionRoute}
+            key={i}/>
         )}
-    </div>
-  };
+    </Col>
+  );
 }
 
 export default Home;
