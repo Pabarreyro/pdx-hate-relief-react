@@ -1,14 +1,17 @@
 import React from "react";
 import cccLogo from '../assets/images/ccc.png';
+import { Link } from 'react-router-dom';
 import { Navbar, Nav, NavItem, NavDropdown, MenuItem } from 'react-bootstrap';
 
 function Header(){
   return (
-    <Navbar inverse collapseOnSelect>
+    <Navbar style={{padding:'0.5rem 1rem'}} inverse collapseOnSelect>
       <Navbar.Header>
-        <Navbar.Brand>
-          <img src={cccLogo}/>
-        </Navbar.Brand>
+        <Link to='/'>
+          <Navbar.Brand>
+              <img src={cccLogo}/>
+          </Navbar.Brand>
+        </Link>
       </Navbar.Header>
       <Nav>
         <NavItem eventKey={1} href="#">
