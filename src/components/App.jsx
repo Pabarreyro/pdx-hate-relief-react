@@ -9,7 +9,11 @@ import Connect from './Connect';
 
 class App extends React.Component {
 
-  constructor() {
+  constructor(props) {
+    super(props);
+    this.state = {
+      newReport: false,
+    }
   }
 
   render() {
@@ -23,8 +27,9 @@ class App extends React.Component {
         <Switch>
           <Route exact path='/' component={Home} />
           <Route path='/learn' component={Learn} />
-          <Route path='/report' component={Report} />
-          <Route path='/connect' component={Connect} />
+          <Route path='/report' render={() =>
+            <ReportControl newReport={this.state.newReport} />} />
+          <Route path='/connect' component={ConnectControl} />
         </Switch>
       </div>
     );
