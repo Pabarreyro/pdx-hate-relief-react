@@ -4,8 +4,8 @@ import { Switch, Route } from 'react-router-dom';
 import Header from "./Header";
 import Home from './Home';
 import Learn from './Learn';
-import Report from './Report';
-import Connect from './Connect';
+import ReportControl from './ReportControl';
+import ConnectControl from './ConnectControl';
 
 class App extends React.Component {
 
@@ -18,11 +18,12 @@ class App extends React.Component {
 
   render() {
     return (
-      var appStyle = {
-        backgroundColor: '#f1edec',
-        textAlign: 'center'
-      }
-      <div style={appStyle}>
+      <div className="main">
+        <style jsx>{`
+            .main {
+              background-color: #f1edec;
+              text-align: center;
+            }`}</style>
         <Header/>
         <Switch>
           <Route exact path='/' component={Home} />
