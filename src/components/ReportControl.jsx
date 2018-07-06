@@ -1,8 +1,18 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 
-function ReportControl() {
+function ReportControl(props) {
+
   return(
-    <h1>Report an incident of hate.</h1>
+    <div>
+      <h1>Report an incident of hate.</h1>
+      <h5>Current report state: {props.newReport}</h5>
+    </div>
   );
 }
+
+ReportControl.propTypes = {
+    newReport : PropTypes.boolean,
+};
+
 export default ReportControl;
