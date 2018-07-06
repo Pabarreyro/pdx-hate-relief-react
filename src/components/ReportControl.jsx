@@ -1,8 +1,8 @@
 import React from 'react';
 
-function Report() {
+function ReportControl() {
   return(
     <h1>Report an incident of hate.</h1>
   );
 }
-export default Report;
+export default ReportControl;
