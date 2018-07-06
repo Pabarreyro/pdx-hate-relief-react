@@ -14,7 +14,7 @@ class App extends React.Component {
     this.state = {
       newReport: false,
       masterResources: {
-        
+
       },
       services: [],
       regions: [],
@@ -44,11 +44,7 @@ class App extends React.Component {
               newReport={this.state.newReport}
               onStartReport={this.handleStartReport} />} />
           <Route path='/connect' render={() =>
-            <ConnectControl
-              resources={this.state.masterResources}
-              services={this.state.services}
-              communities={this.state.communities}
-              regions={this.state.regions} />} />
+            <ConnectControl />} />
         </Switch>
       </div>
     );
