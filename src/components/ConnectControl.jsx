@@ -1,16 +1,23 @@
 import React from 'react';
 import PropTypes from 'prop-types';
+import ResourceFilter from './ResourceFilter';
+import ResourceCard from './ResourceCard';
 
-function ConnectControl() {
+function ConnectControl(props) {
   return(
-    <h1>Connect with local reaources!</h1>
+    <div>
+      <ResourceFilter
+        regions={props.regions}
+        comunities={props.comunities}
+        services={props.services}/>
+    </div>
   );
 }
 
 ConnectControl.propTypes = {
   resources: PropTypes.object,
   services: PropTypes.array,
-  communities: PropTypes.array, 
+  communities: PropTypes.array,
   regions: PropTypes.array
 }
 export default ConnectControl;
