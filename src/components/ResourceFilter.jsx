@@ -22,17 +22,29 @@ function ResourceFilter(props) {
             <div>
               <div class="col-md-3">
                 <label for="communities"> I am </label>
-                <Select />
+                <Select
+                  name="communities"
+                  value={props.selectedCommunities}
+                  onChange={onSelectCommunities}
+                  options={props.communities} />
                 </Select>
               </div>
               <div class="col-md-3">
                 <label for="services">Looking for</label>
-                <Select />
+                <Select
+                  [name="services"
+                  value={props.selectedServices}
+                  onChange={onSelectServices}
+                  options={props.services} />
                 </Select>
               </div>
               <div class="col-md-3">
                 <label for="regions">In</label>
-                <Select />
+                <Select
+                  name="regions"
+                  value={props.selectedRegions}
+                  onChange={onSelectRegions}
+                  options={props.Regions} />
                 </Select>
               </div>
               <Button>Find Resources</Button>
@@ -49,6 +61,12 @@ ResourceFilter.propTypes = {
     regions = PropTypes.array.isRequired,
     services = PropTypes.array.isRequired,
     communities = PropTypes.array.isRequired,
+    selectedCommunities = PropTypes.string,
+    selectedServices = PropTypes.string,
+    selectedRegions = PropTypes.string,
+    onSelectCommunities = PropTypes.func,
+    onSelectServices = PropTypes.func,
+    onSelectRegions = PropTypes.func
 }
 
 export default ResourceFilter;
