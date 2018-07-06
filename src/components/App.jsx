@@ -1,7 +1,7 @@
 import React from 'react';
 import { Switch, Route } from 'react-router-dom';
 
-import Header from "./Header";
+import Header from './Header';
 import Home from './Home';
 import Learn from './Learn';
 import ReportControl from './ReportControl';
@@ -13,75 +13,73 @@ class App extends React.Component {
     super(props);
     this.state = {
       newReport: false,
-      masterResources: {
-
-      },
+      masterResources: {},
       services: [
-        { id: 1, name: 'Safe space', value: 'Safe space' },
-        { id: 2, name: 'Support groups & community gatherings', value: 'Support groups & community gatherings' },
-        { id: 3, name: 'Immigration assistance', value: 'Immigration assistance' },
-        { id: 4, name: 'Financial assistance', value: 'Financial assistance' },
-        { id: 5, name: 'Legal assistance', value: 'Legal assistance' },
-        { id: 6, name: 'Counseling & health services', value: 'Counseling & health services' },
-        { id: 7, name: 'Language services', value: 'Language services' },
-        { id: 8, name: 'Advocacy & community action opportunities', value: 'Advocacy & community action opportunities' },
-        { id: 9, name: 'Educational resources', value: 'Educational resources' },
-        { id: 10, name: 'Training & leadership development', value: 'Training & leadership development' }
+        { id: 1, label: 'Safe space', value: 'Safe space' },
+        { id: 2, label: 'Support groups & community gatherings', value: 'Support groups & community gatherings' },
+        { id: 3, label: 'Immigration assistance', value: 'Immigration assistance' },
+        { id: 4, label: 'Financial assistance', value: 'Financial assistance' },
+        { id: 5, label: 'Legal assistance', value: 'Legal assistance' },
+        { id: 6, label: 'Counseling & health services', value: 'Counseling & health services' },
+        { id: 7, label: 'Language services', value: 'Language services' },
+        { id: 8, label: 'Advocacy & community action opportunities', value: 'Advocacy & community action opportunities' },
+        { id: 9, label: 'Educational resources', value: 'Educational resources' },
+        { id: 10, label: 'Training & leadership development', value: 'Training & leadership development' },
       ],
       regions: [
-        { id: 1, name: 'All Areas', value: 'All Areas' },
-        { id: 2, name: 'North Portland (west of I-5)', value: 'North Portland (west of I-5)' },
-        { id: 3, name: 'Northeast Portland (west of I-205)', value: 'Northeast Portland (west of I-205)' },
-        { id: 4, name: 'Northeast Portland (east of I-205)', value: 'Northeast Portland (east of I-205)' },
-        { id: 5, name: 'Southeast Portland (west of I-205)', value: 'Southeast Portland (west of I-205)' },
-        { id: 6, name: 'Southeast Portland (east of I-205)', value: 'Southeast Portland (east of I-205)' },
-        { id: 7, name: 'Downtown Portland (inside I-405 loop)', value: 'Downtown Portland (inside I-405 loop)' },
-        { id: 8, name: 'Northwest Portland (outside of I-405 loop)', value: 'Northwest Portland (outside of I-405 loop)' },
-        { id: 9, name: 'Southwest (outside of I-405 loop)', value: 'Southwest (outside of I-405 loop)' }
+        { id: 1, label: 'All Areas', value: 'All Areas' },
+        { id: 2, label: 'North Portland (west of I-5)', value: 'North Portland (west of I-5)' },
+        { id: 3, label: 'Northeast Portland (west of I-205)', value: 'Northeast Portland (west of I-205)' },
+        { id: 4, label: 'Northeast Portland (east of I-205)', value: 'Northeast Portland (east of I-205)' },
+        { id: 5, label: 'Southeast Portland (west of I-205)', value: 'Southeast Portland (west of I-205)' },
+        { id: 6, label: 'Southeast Portland (east of I-205)', value: 'Southeast Portland (east of I-205)' },
+        { id: 7, label: 'Downtown Portland (inside I-405 loop)', value: 'Downtown Portland (inside I-405 loop)' },
+        { id: 8, label: 'Northwest Portland (outside of I-405 loop)', value: 'Northwest Portland (outside of I-405 loop)' },
+        { id: 9, label: 'Southwest (outside of I-405 loop)', value: 'Southwest (outside of I-405 loop)' },
       ],
       communities: [
-        { id: 1, name: 'LGBTQ2SIA+', value: 'LGBTQ2SIA+' },
-        { id: 2, name: 'Female', value: 'Female' },
-        { id: 3, name: 'Gender Expansive', value: 'Gender Expansive' },
-        { id: 4, name: 'Gender Fluid', value: 'Gender Fluid' },
-        { id: 5, name: 'Gender Nonconforming', value: 'Gender Nonconforming' },
-        { id: 6, name: 'Genderqueer', value: 'Genderqueer' },
-        { id: 7, name: 'Non-binary', value: 'Non-binary' },
-        { id: 8, name: 'Male', value: 'Male' },
-        { id: 9, name: 'Questioning', value: 'Questioning' },
-        { id: 10, name: 'Trans female', value: 'Trans female' },
-        { id: 11, name: 'Trans male', value: 'Trans male' },
-        { id: 12, name: 'Two-spirit', value: 'Two-spirit' },
-        { id: 13, name: 'Black', value: 'Black' },
-        { id: 14, name: 'African American', value: 'African American' },
-        { id: 15, name: 'African', value: 'African' },
-        { id: 16, name: 'Caribbean', value: 'Caribbean' },
-        { id: 17, name: 'Asian', value: 'Asian' },
-        { id: 18, name: 'Chinese', value: 'Chinese' },
-        { id: 19, name: 'Filipino/a', value: 'Filipino/a' },
-        { id: 20, name: 'Hmong', value: 'Hmong' },
-        { id: 21, name: 'Japanese', value: 'Japanese' },
-        { id: 22, name: 'Korean', value: 'Korean' },
-        { id: 23, name: 'Laotian', value: 'Laotian' },
-        { id: 24, name: 'South Asian', value: 'South Asian' },
-        { id: 25, name: 'Vietnamese', value: 'Vietnamese' },
-        { id: 26, name: 'Latino/a/x', value: 'Latino/a/x' },
-        { id: 27, name: 'Latino/a/x Mexican', value: 'Latino/a/x Mexican' },
-        { id: 28, name: 'Latino/a/x Central American', value: 'Latino/a/x Central American' },
-        { id: 29, name: 'Hawaiian/Pacific Islander', value: 'Hawaiian/Pacific Islander'}
-        { id: 30, name: 'Micronesian', value: 'Micronesian' },
-        { id: 31, name: 'Native Hawaiian', value: 'Native Hawaiian' },
-        { id: 32, name: 'Guamanian or Chamorro', value: 'Guamanian or Chamorro' },
-        { id: 33, name: 'Samoan', value: 'Samoan' },
-        { id: 34, name: 'Native American', value: 'Native American' },
-        { id: 35, name: 'Alaskan Native', value: 'Alaskan Native' },
-        { id: 36, name: 'Middle Eastern', value: 'Middle Eastern' },
-        { id: 37, name: 'White/European', value: 'White/European' },
-        { id: 38, name: 'Eastern European', value: 'Eastern European' },
-        { id: 39, name: 'Slavic', value: 'Slavic' },
-        { id: 40, name: 'Western European', value: 'Western European' },
-        { id: 41, name: 'Youth', value: 'Youth' },
-        { id: 42, name: 'Homeless', value: 'Homeless' }
+        { id: 1, label: 'LGBTQ2SIA+', value: 'LGBTQ2SIA+' },
+        { id: 2, label: 'Female', value: 'Female' },
+        { id: 3, label: 'Gender Expansive', value: 'Gender Expansive' },
+        { id: 4, label: 'Gender Fluid', value: 'Gender Fluid' },
+        { id: 5, label: 'Gender Nonconforming', value: 'Gender Nonconforming' },
+        { id: 6, label: 'Genderqueer', value: 'Genderqueer' },
+        { id: 7, label: 'Non-binary', value: 'Non-binary' },
+        { id: 8, label: 'Male', value: 'Male' },
+        { id: 9, label: 'Questioning', value: 'Questioning' },
+        { id: 10, label: 'Trans female', value: 'Trans female' },
+        { id: 11, label: 'Trans male', value: 'Trans male' },
+        { id: 12, label: 'Two-spirit', value: 'Two-spirit' },
+        { id: 13, label: 'Black', value: 'Black' },
+        { id: 14, label: 'African American', value: 'African American' },
+        { id: 15, label: 'African', value: 'African' },
+        { id: 16, label: 'Caribbean', value: 'Caribbean' },
+        { id: 17, label: 'Asian', value: 'Asian' },
+        { id: 18, label: 'Chinese', value: 'Chinese' },
+        { id: 19, label: 'Filipino/a', value: 'Filipino/a' },
+        { id: 20, label: 'Hmong', value: 'Hmong' },
+        { id: 21, label: 'Japanese', value: 'Japanese' },
+        { id: 22, label: 'Korean', value: 'Korean' },
+        { id: 23, label: 'Laotian', value: 'Laotian' },
+        { id: 24, label: 'South Asian', value: 'South Asian' },
+        { id: 25, label: 'Vietnamese', value: 'Vietnamese' },
+        { id: 26, label: 'Latino/a/x', value: 'Latino/a/x' },
+        { id: 27, label: 'Latino/a/x Mexican', value: 'Latino/a/x Mexican' },
+        { id: 28, label: 'Latino/a/x Central American', value: 'Latino/a/x Central American' },
+        { id: 29, label: 'Hawaiian/Pacific Islander', value: 'Hawaiian/Pacific Islander'},
+        { id: 30, label: 'Micronesian', value: 'Micronesian' },
+        { id: 31, label: 'Native Hawaiian', value: 'Native Hawaiian' },
+        { id: 32, label: 'Guamanian or Chamorro', value: 'Guamanian or Chamorro' },
+        { id: 33, label: 'Samoan', value: 'Samoan' },
+        { id: 34, label: 'Native American', value: 'Native American' },
+        { id: 35, label: 'Alaskan Native', value: 'Alaskan Native' },
+        { id: 36, label: 'Middle Eastern', value: 'Middle Eastern' },
+        { id: 37, label: 'White/European', value: 'White/European' },
+        { id: 38, label: 'Eastern European', value: 'Eastern European' },
+        { id: 39, label: 'Slavic', value: 'Slavic' },
+        { id: 40, label: 'Western European', value: 'Western European' },
+        { id: 41, label: 'Youth', value: 'Youth' },
+        { id: 42, label: 'Homeless', value: 'Homeless' },
       ],
       selectedCommunities: '',
       selectedServices: '',
@@ -98,15 +96,15 @@ class App extends React.Component {
   }
 
   handleSelectRegions() {
-
+    return null;
   }
 
   handleSelectServices() {
-
+    return null;
   }
 
   handleSelectCommunities() {
-
+    return null;
   }
 
   render() {
@@ -130,7 +128,10 @@ class App extends React.Component {
               resources={this.state.masterResources}
               services={this.state.services}
               communities={this.state.communities}
-              regions={this.state.regions} />} />
+              regions={this.state.regions}
+              onSelectCommunities={this.handleSelectCommunities}
+              onSelectServices={this.handleSelectServices}
+              onSelectRegions={this.handleSelectRegions} />} />
         </Switch>
       </div>
     );
