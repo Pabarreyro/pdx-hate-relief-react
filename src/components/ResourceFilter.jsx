@@ -2,6 +2,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 
 import { Jumbotron, Button } from 'react-bootstrap';
+import Select from 'react-select';
 
 function ResourceFilter(props) {
   return(
@@ -21,12 +22,18 @@ function ResourceFilter(props) {
             <div>
               <div class="col-md-3">
                 <label for="communities"> I am </label>
+                <Select />
+                </Select>
               </div>
               <div class="col-md-3">
                 <label for="services">Looking for</label>
+                <Select />
+                </Select>
               </div>
               <div class="col-md-3">
                 <label for="regions">In</label>
+                <Select />
+                </Select>
               </div>
               <Button>Find Resources</Button>
             </div>
@@ -42,12 +49,6 @@ ResourceFilter.propTypes = {
     regions = PropTypes.array.isRequired,
     services = PropTypes.array.isRequired,
     communities = PropTypes.array.isRequired,
-    selectedCommunities = PropTypes.string,
-    selectedServices = PropTypes.string,
-    selectedRegions = PropTypes.string,
-    onSelectCommunities = PropTypes.func,
-    onSelectServices = PropTypes.func,
-    onSelectRegions = PropTypes.func
 }
 
 export default ResourceFilter;
