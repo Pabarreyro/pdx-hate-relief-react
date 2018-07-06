@@ -7,5 +7,5 @@ function ResourceCard(props) {
 
 ResourceCard.propTypes = {
   
-}
+};
 export default ResourceCard;

@@ -6,7 +6,7 @@ function ResourceList(props) {
 }
 
 ResourceList.propTypes = {
-    resources: PropTypes.object,
-}
+  resources: PropTypes.object,
+};
 
 export default ResourceList;

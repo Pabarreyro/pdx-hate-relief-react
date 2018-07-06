@@ -1,4 +1,4 @@
-import React from "react";
+import React from 'react';
 import cccLogo from '../assets/images/ccc.png';
 import { Link } from 'react-router-dom';
 import { Navbar, Nav, NavItem, NavDropdown, MenuItem } from 'react-bootstrap';
@@ -9,7 +9,7 @@ function Header(){
       <Navbar.Header>
         <Link to='/'>
           <Navbar.Brand>
-              <img src={cccLogo}/>
+            <img src={cccLogo}/>
           </Navbar.Brand>
         </Link>
       </Navbar.Header>

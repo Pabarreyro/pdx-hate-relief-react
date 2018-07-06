@@ -3,6 +3,7 @@ import PropTypes from 'prop-types';
 
 import { Jumbotron, Button } from 'react-bootstrap';
 import Select from 'react-select';
+import '!style-loader!css-loader!react-select/dist/react-select.css';
 
 function ResourceFilter(props) {
 
@@ -26,17 +27,17 @@ function ResourceFilter(props) {
                 <Select
                   name="communities"
                   value={props.selectedCommunities}
-                  onChange={onSelectCommunities}
-                  options={props.communities} />
+                  onChange={props.onSelectCommunities}
+                  options={props.communities}>
                 </Select>
               </div>
               <div md={3}>
                 <label for="services">Looking for</label>
                 <Select
-                  [name="services"
+                  name="services"
                   value={props.selectedServices}
-                  onChange={onSelectServices}
-                  options={props.services} />
+                  onChange={props.onSelectServices}
+                  options={props.services}>
                 </Select>
               </div>
               <div md={3}>
@@ -44,8 +45,8 @@ function ResourceFilter(props) {
                 <Select
                   name="regions"
                   value={props.selectedRegions}
-                  onChange={onSelectRegions}
-                  options={props.Regions} />
+                  onChange={props.onSelectRegions}
+                  options={props.regions}>
                 </Select>
               </div>
               <Button>Find Resources</Button>
@@ -54,20 +55,19 @@ function ResourceFilter(props) {
         </div>
       </Jumbotron>
     </div>
-
-  )
+  );
 }
 
 ResourceFilter.propTypes = {
-    regions = PropTypes.array.isRequired,
-    services = PropTypes.array.isRequired,
-    communities = PropTypes.array.isRequired,
-    selectedCommunities = PropTypes.string,
-    selectedServices = PropTypes.string,
-    selectedRegions = PropTypes.string,
-    onSelectCommunities = PropTypes.func,
-    onSelectServices = PropTypes.func,
-    onSelectRegions = PropTypes.func
-}
+  regions: PropTypes.array.isRequired,
+  services: PropTypes.array.isRequired,
+  communities: PropTypes.array.isRequired,
+  selectedCommunities: PropTypes.string,
+  selectedServices: PropTypes.string,
+  selectedRegions: PropTypes.string,
+  onSelectCommunities: PropTypes.func,
+  onSelectServices: PropTypes.func,
+  onSelectRegions: PropTypes.func
+};
 
 export default ResourceFilter;

@@ -8,8 +8,11 @@ function ConnectControl(props) {
     <div>
       <ResourceFilter
         regions={props.regions}
-        comunities={props.comunities}
-        services={props.services}/>
+        communities={props.communities}
+        services={props.services}
+        onSelectCommunities={props.onSelectCommunities}
+        onSelectServices={props.onSelectServices}
+        onSelectRegions={props.onSelectRegions}/>
     </div>
   );
 }
@@ -18,6 +21,12 @@ ConnectControl.propTypes = {
   resources: PropTypes.object,
   services: PropTypes.array,
   communities: PropTypes.array,
-  regions: PropTypes.array
-}
+  regions: PropTypes.array,
+  selectedCommunities: PropTypes.string,
+  selectedServices: PropTypes.string,
+  selectedRegions: PropTypes.string,
+  onSelectCommunities: PropTypes.func,
+  onSelectServices: PropTypes.func,
+  onSelectRegions: PropTypes.func
+};
 export default ConnectControl;

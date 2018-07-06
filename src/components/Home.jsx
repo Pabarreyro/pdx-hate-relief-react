@@ -18,7 +18,7 @@ const homePanelCopy = [
     action: 'Report an Incident',
     actionRoute: '/report'
   }
-]
+];
 
 function Home() {
   return (
@@ -27,13 +27,13 @@ function Home() {
         <img src={puahLogo} style={{height: 150, width: 150, marginBottom: '2rem', borderRadius: '0.5rem'}}/>
       </a>
       { homePanelCopy.map((panel, i) =>
-          <HomePanel
-            heading={panel.heading}
-            lead={panel.lead}
-            action={panel.action}
-            actionRoute={panel.actionRoute}
-            key={i}/>
-        )}
+        <HomePanel
+          heading={panel.heading}
+          lead={panel.lead}
+          action={panel.action}
+          actionRoute={panel.actionRoute}
+          key={i}/>
+      )}
     </Col>
   );
 }

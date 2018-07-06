@@ -6,9 +6,9 @@ function ReportControl(props) {
   let currentView = null;
 
   if (!props.newReport) {
-    currentView = <Button onClick={props.onStartReport}>Start Report</Button>
+    currentView = <Button onClick={props.onStartReport}>Start Report</Button>;
   } else {
-    currentView = <h1>Continue report</h1>
+    currentView = <h1>Continue report</h1>;
   }
   return(
     <div>
@@ -18,8 +18,8 @@ function ReportControl(props) {
 }
 
 ReportControl.propTypes = {
-    newReport : PropTypes.boolean,
-    onStartReport : PropTypes.func
+  newReport : PropTypes.boolean,
+  onStartReport : PropTypes.func
 };
 
 export default ReportControl;
