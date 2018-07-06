@@ -36,7 +36,8 @@ class App extends React.Component {
           <Route path='/learn' component={Learn} />
           <Route path='/report' render={() =>
             <ReportControl
-              newReport={this.state.newReport} />} />
+              newReport={this.state.newReport}
+              onStartReport={this.handleStartReport} />} />
           <Route path='/connect' component={ConnectControl} />
         </Switch>
       </div>
