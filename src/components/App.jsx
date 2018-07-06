@@ -13,7 +13,13 @@ class App extends React.Component {
     super(props);
     this.state = {
       newReport: false,
-    }
+    };
+    this.handleStartReport = this.handleStartReport.bind(this);
+  }
+
+  handleStartReport() {
+    this.setState({ newReport : true});
+    console.log(newReport);
   }
 
   render() {
@@ -29,7 +35,8 @@ class App extends React.Component {
           <Route exact path='/' component={Home} />
           <Route path='/learn' component={Learn} />
           <Route path='/report' render={() =>
-            <ReportControl newReport={this.state.newReport} />} />
+            <ReportControl
+              newReport={this.state.newReport} />} />
           <Route path='/connect' component={ConnectControl} />
         </Switch>
       </div>
