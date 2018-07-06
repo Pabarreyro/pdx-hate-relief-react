@@ -21,7 +21,7 @@ function ResourceFilter(props) {
           <p>Connect with organizations across Potland who are helping communities heal from and prevent hate crimes.</p>
           <div className="resource-search">
             <div>
-              <div class="col-md-3">
+              <div md={3}>
                 <label for="communities"> I am </label>
                 <Select
                   name="communities"
@@ -30,7 +30,7 @@ function ResourceFilter(props) {
                   options={props.communities} />
                 </Select>
               </div>
-              <div class="col-md-3">
+              <div md={3}>
                 <label for="services">Looking for</label>
                 <Select
                   [name="services"
@@ -39,7 +39,7 @@ function ResourceFilter(props) {
                   options={props.services} />
                 </Select>
               </div>
-              <div class="col-md-3">
+              <div md={3}>
                 <label for="regions">In</label>
                 <Select
                   name="regions"
