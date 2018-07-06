@@ -7,22 +7,28 @@ import Learn from './Learn';
 import Report from './Report';
 import Connect from './Connect';
 
-function App(){
-  var appStyle = {
-    backgroundColor: '#f1edec',
-    textAlign: 'center'
+class App extends React.Component {
+
+  constructor() {
   }
-  return (
-    <div style={appStyle}>
-      <Header/>
-      <Switch>
-        <Route exact path='/' component={Home} />
-        <Route path='/learn' component={Learn} />
-        <Route path='/report' component={Report} />
-        <Route path='/connect' component={Connect} />
-      </Switch>
-    </div>
-  );
+
+  render() {
+    return (
+      var appStyle = {
+        backgroundColor: '#f1edec',
+        textAlign: 'center'
+      }
+      <div style={appStyle}>
+        <Header/>
+        <Switch>
+          <Route exact path='/' component={Home} />
+          <Route path='/learn' component={Learn} />
+          <Route path='/report' component={Report} />
+          <Route path='/connect' component={Connect} />
+        </Switch>
+      </div>
+    );
+  }
 }
 
 export default App;
