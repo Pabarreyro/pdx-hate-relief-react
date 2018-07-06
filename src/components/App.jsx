@@ -13,13 +13,18 @@ class App extends React.Component {
     super(props);
     this.state = {
       newReport: false,
+      masterResources: {
+        
+      },
+      services: [],
+      regions: [],
+      communities: []
     };
     this.handleStartReport = this.handleStartReport.bind(this);
   }
 
   handleStartReport() {
     this.setState({ newReport : true});
-    console.log(newReport);
   }
 
   render() {
@@ -38,7 +43,12 @@ class App extends React.Component {
             <ReportControl
               newReport={this.state.newReport}
               onStartReport={this.handleStartReport} />} />
-          <Route path='/connect' component={ConnectControl} />
+          <Route path='/connect' render={() =>
+            <ConnectControl
+              resources={this.state.masterResources}
+              services={this.state.services}
+              communities={this.state.communities}
+              regions={this.state.regions} />} />
         </Switch>
       </div>
     );
