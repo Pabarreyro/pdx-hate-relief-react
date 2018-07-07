@@ -119,7 +119,6 @@ class App extends React.Component {
         <style jsx>{`
             .main {
               background-color: #f1edec;
-              text-align: center;
             }`}</style>
         <Header/>
         <Switch>
