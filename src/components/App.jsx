@@ -95,16 +95,22 @@ class App extends React.Component {
     this.setState({ newReport : true});
   }
 
-  handleSelectRegions() {
-    return null;
+  handleSelectRegions(selectedRegions) {
+    this.setState({ selectedRegions: selectedRegions.value }, this.consoleLogState);
   }
 
-  handleSelectServices() {
-    return null;
+  handleSelectServices(selectedServices) {
+    this.setState({ selectedServices: selectedServices.value }, this.consoleLogState);
   }
 
-  handleSelectCommunities() {
-    return null;
+  handleSelectCommunities(selectedCommunities) {
+    this.setState({ selectedCommunities: selectedCommunities.value }, this.consoleLogState);
+  }
+
+  consoleLogState() {
+    console.log(this.state.selectedRegions);
+    console.log(this.state.selectedServices);
+    console.log(this.state.selectedCommunities);
   }
 
   render() {
