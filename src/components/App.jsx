@@ -13,6 +13,7 @@ class App extends React.Component {
     super(props);
     this.state = {
       newReport: false,
+      currentReportSection: 1,
       masterResources: {},
       services: [
         { id: 1, label: 'Safe space', value: 'Safe space' },
@@ -97,6 +98,7 @@ class App extends React.Component {
     this.setState({ newReport : true});
   }
 
+
   handleSelectRegions(selectedRegions) {
     this.setState({ selectedRegions: selectedRegions },
       this.consoleLogState);
@@ -136,6 +138,7 @@ class App extends React.Component {
           <Route path='/report' render={() =>
             <ReportControl
               newReport={this.state.newReport}
+              currentReportSection={this.state.currentReportSection}
               onStartReport={this.handleStartReport} />} />
           <Route path='/connect' render={() =>
             <ConnectControl
