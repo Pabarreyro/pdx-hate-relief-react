@@ -88,6 +88,7 @@ class App extends React.Component {
       defaultResources: true
     };
     this.handleStartReport = this.handleStartReport.bind(this);
+    this.handleAdvanceReportSection = this.handleAdvanceReportSection.bind(this);
     this.handleSelectCommunities = this.handleSelectCommunities.bind(this);
     this.handleSelectServices = this.handleSelectServices.bind(this);
     this.handleSelectRegions = this.handleSelectRegions.bind(this);
@@ -98,6 +99,10 @@ class App extends React.Component {
     this.setState({ newReport : true});
   }
 
+  handleAdvanceReportSection() {
+    let newCurrentSection = this.state.currentReportSection + 1;
+    this.setState({currentReportSection : newCurrentSection});
+  }
 
   handleSelectRegions(selectedRegions) {
     this.setState({ selectedRegions: selectedRegions },
@@ -139,7 +144,8 @@ class App extends React.Component {
             <ReportControl
               newReport={this.state.newReport}
               currentReportSection={this.state.currentReportSection}
-              onStartReport={this.handleStartReport} />} />
+              onStartReport={this.handleStartReport}
+              onAdvanceSection={this.handleAdvanceReportSection} />} />
           <Route path='/connect' render={() =>
             <ConnectControl
               resources={this.state.masterResources}
