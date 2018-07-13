@@ -14,11 +14,11 @@ function Header(){
         </Link>
       </Navbar.Header>
       <Nav>
-        <NavItem eventKey={1} href="#">
-          Report
+        <NavItem>
+          <Link to='/report'>Report</Link>
         </NavItem>
-        <NavItem eventKey={2} href="#">
-          Connect
+        <NavItem>
+          <Link to='/connect'>Connect</Link>
         </NavItem>
       </Nav>
     </Navbar>
