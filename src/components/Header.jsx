@@ -7,11 +7,11 @@ function Header(){
   return (
     <Navbar style={{padding:'0.5rem 1rem'}} inverse collapseOnSelect>
       <Navbar.Header>
-        <Link to='/'>
-          <Navbar.Brand>
+        <Navbar.Brand>
+          <Link to='/'>
             <img src={cccLogo}/>
-          </Navbar.Brand>
-        </Link>
+          </Link>
+        </Navbar.Brand>
       </Navbar.Header>
       <Nav>
         <NavItem>
