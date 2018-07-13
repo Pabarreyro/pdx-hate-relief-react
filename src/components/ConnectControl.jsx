@@ -21,33 +21,19 @@ function ConnectControl(props) {
           ) : (
             <div>
               <h1>Great! I see you've selected the following filter criteria:</h1>
+              <h3><strong>Services: </strong></h3>
+              <h5>{props.selectedServices[0].value} </h5>
+              <h3><strong>Communities: </strong></h3>
+              <h5>{props.selectedCommunities[0].value} </h5>
+              <h3><strong>Regions: </strong></h3>
+              <h5>{props.selectedRegions[0].value} </h5>
+
+              <hr/>
+              <ResourceCard
+                selectedServices={props.selectedServices}
+                selectedRegions={props.selectedRegions}
+                selectedCommunities={props.selectedCommunities} />
             </div>
-              // <h3><strong>Services: </strong></h3>
-              //   <div>
-              //     {props.selectedServices.map((service, index) => {
-              //       <span key={index}>service </span>
-              //     }
-              //   </div>
-              //
-              // <h3><strong>Communities: </strong></h3>
-              //   <div>
-              //     {props.selectedCommunities.map((community, index) => {
-              //       <span key={index}>community </span>
-              //     }
-              //   </div>
-              //
-              // <h3><strong>Regions: </strong></h3>
-              //   <div>
-              //     {props.selectedRegions.map((region, index) => {
-              //       <span key={index}>region </span>
-              //     }
-              //   </div>
-              //
-              // <hr/>
-              // <ResourceCard
-              //   selectedServices={props.selectedServices}
-              //   selectedRegions={props.selectedRegions}
-              //   selectedCommunities={props.selectedCommunities} />
           )
         }
       </div>
