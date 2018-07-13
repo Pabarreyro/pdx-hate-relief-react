@@ -40,7 +40,7 @@ function ResourceFilter(props) {
                   options={props.communities}
                   multi={true}
                   removeSelected={true}
-                  closeOnSelect={false} >
+                  joinValues={true} >
                 </Select>
               </Col>
               <Col md={3}>
@@ -55,7 +55,7 @@ function ResourceFilter(props) {
                   options={props.services}
                   multi={true}
                   removeSelected={true}
-                  closeOnSelect={false} >
+                  joinValues={true} >
                 </Select>
               </Col>
               <Col md={3}>
@@ -70,7 +70,7 @@ function ResourceFilter(props) {
                   options={props.regions}
                   multi={true}
                   removeSelected={true}
-                  closeOnSelect={false} >
+                  joinValues={true} >
                 </Select>
               </Col>
               <Col md={3}>
