@@ -34,10 +34,12 @@ function ResourceFilter(props) {
                 </div>
                 <Select
                   name="communities"
+                  placeholder="Select all that apply"
                   value={props.selectedCommunities}
                   onChange={props.onSelectCommunities}
                   options={props.communities}
-                  multi={true}>
+                  multi={true}
+                  simpleValue={true}>
                 </Select>
               </Col>
               <Col md={3}>
@@ -46,10 +48,13 @@ function ResourceFilter(props) {
                 </div>
                 <Select
                   name="services"
+                  placeholder="Select all that apply"
                   value={props.selectedServices}
                   onChange={props.onSelectServices}
                   options={props.services}
-                  multi={true}>
+                  multi={true}
+                  simpleValue={true}
+                  joinValues={true} >
                 </Select>
               </Col>
               <Col md={3}>
@@ -58,10 +63,12 @@ function ResourceFilter(props) {
                 </div>
                 <Select
                   name="regions"
+                  placeholder="Select all that apply"
                   value={props.selectedRegions}
                   onChange={props.onSelectRegions}
                   options={props.regions}
-                  multi={true}>
+                  multi={true}
+                  simpleValue={true}>
                 </Select>
               </Col>
               <Col md={3}>
