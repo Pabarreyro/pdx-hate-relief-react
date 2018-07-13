@@ -10,25 +10,37 @@ function ReportControl(props) {
         (props.currentReportSection === 1) ? (
             <div>
               <h1>About Me</h1>
-              <Button onClick={props.onAdvanceSection}>Save & Continue</Button>
+              <div>
+                <Button onClick={props.onPreviousSection}>Back</Button>
+                <Button onClick={props.onAdvanceSection}>Save & Continue</Button>
+              </div>
             </div>
           ) :
         (props.currentReportSection === 2) ? (
             <div>
               <h1>Time + Place</h1>
-              <Button onClick={props.onAdvanceSection}>Save & Continue</Button>
+              <div>
+                <Button onClick={props.onPreviousSection}>Back</Button>
+                <Button onClick={props.onAdvanceSection}>Save & Continue</Button>
+              </div>
             </div>
           ) :
         (props.currentReportSection === 3) ? (
             <div>
               <h1>Incident Details</h1>
-              <Button onClick={props.onAdvanceSection}>Save & Continue</Button>
+              <div>
+                <Button onClick={props.onPreviousSection}>Back</Button>
+                <Button onClick={props.onAdvanceSection}>Save & Continue</Button>
+              </div>
             </div>
           ) :
         (props.currentReportSection === 4) ? (
             <div>
               <h1>Additional Info</h1>
-              <Button onClick={props.onAdvanceSection}>Save & Continue</Button>
+              <div>
+                <Button onClick={props.onPreviousSection}>Back</Button>
+                <Button onClick={props.onAdvanceSection}>Save & Continue</Button>
+              </div>
             </div>
           ) :
         <h1>Review</h1>
