@@ -81,9 +81,9 @@ class App extends React.Component {
         { id: 41, label: 'Youth', value: 'Youth' },
         { id: 42, label: 'Homeless', value: 'Homeless' },
       ],
-      selectedCommunities: '',
-      selectedServices: '',
-      selectedRegions: '',
+      selectedCommunities: [],
+      selectedServices: [],
+      selectedRegions: [],
       defaultResources: true
     };
     this.handleStartReport = this.handleStartReport.bind(this);
@@ -98,14 +98,17 @@ class App extends React.Component {
   }
 
   handleSelectRegions(selectedRegions) {
+    console.log(selectedRegions.value);
     this.setState({ selectedRegions: selectedRegions.value }, this.consoleLogState);
   }
 
   handleSelectServices(selectedServices) {
+    console.log(selectedServices.value);
     this.setState({ selectedServices: selectedServices.value }, this.consoleLogState);
   }
 
   handleSelectCommunities(selectedCommunities) {
+    console.log(selectedCommunities.value);
     this.setState({ selectedCommunities: selectedCommunities.value }, this.consoleLogState);
   }
 
