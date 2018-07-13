@@ -98,18 +98,17 @@ class App extends React.Component {
   }
 
   handleSelectRegions(selectedRegions) {
-    console.log(selectedRegions.value);
-    this.setState({ selectedRegions: selectedRegions.value }, this.consoleLogState);
+    this.setState({ selectedRegions: selectedRegions },
+      this.consoleLogState);
   }
 
   handleSelectServices(selectedServices) {
-    console.log(selectedServices.value);
-    this.setState({ selectedServices: selectedServices.value }, this.consoleLogState);
+    this.setState({ selectedServices: selectedServices },
+      this.consoleLogState);
   }
 
   handleSelectCommunities(selectedCommunities) {
-    console.log(selectedCommunities.value);
-    this.setState({ selectedCommunities: selectedCommunities.value }, this.consoleLogState);
+    this.setState({ selectedCommunities: selectedCommunities }, this.consoleLogState);
   }
 
   handleSubmitFilters() {
