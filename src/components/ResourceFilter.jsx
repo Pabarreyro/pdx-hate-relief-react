@@ -39,7 +39,8 @@ function ResourceFilter(props) {
                   onChange={props.onSelectCommunities}
                   options={props.communities}
                   multi={true}
-                  simpleValue={true}>
+                  removeSelected={true}
+                  closeOnSelect={false} >
                 </Select>
               </Col>
               <Col md={3}>
@@ -53,8 +54,8 @@ function ResourceFilter(props) {
                   onChange={props.onSelectServices}
                   options={props.services}
                   multi={true}
-                  simpleValue={true}
-                  joinValues={true} >
+                  removeSelected={true}
+                  closeOnSelect={false} >
                 </Select>
               </Col>
               <Col md={3}>
@@ -68,7 +69,8 @@ function ResourceFilter(props) {
                   onChange={props.onSelectRegions}
                   options={props.regions}
                   multi={true}
-                  simpleValue={true}>
+                  removeSelected={true}
+                  closeOnSelect={false} >
                 </Select>
               </Col>
               <Col md={3}>
