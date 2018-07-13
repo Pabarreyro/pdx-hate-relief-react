@@ -90,6 +90,7 @@ class App extends React.Component {
     this.handleSelectCommunities = this.handleSelectCommunities.bind(this);
     this.handleSelectServices = this.handleSelectServices.bind(this);
     this.handleSelectRegions = this.handleSelectRegions.bind(this);
+    this.handleSubmitFilters = this.handleSubmitFilters.bind(this);
   }
 
   handleStartReport() {
@@ -109,13 +110,14 @@ class App extends React.Component {
   }
 
   handleSubmitFilters() {
-    this.setState({ defaultResources: false });
+    this.setState({ defaultResources: false }, this.consoleLogState);
   }
 
   consoleLogState() {
     console.log(this.state.selectedRegions);
     console.log(this.state.selectedServices);
     console.log(this.state.selectedCommunities);
+    console.log(this.state.defaultResources);
   }
 
   render() {
@@ -139,10 +141,14 @@ class App extends React.Component {
               services={this.state.services}
               communities={this.state.communities}
               regions={this.state.regions}
+              selectedServices={this.state.selectedServices}
+              selectedRegions={this.state.selectedRegions}
+              selectedCommunities={this.state.selectedCommunities}
               onSelectCommunities={this.handleSelectCommunities}
               onSelectServices={this.handleSelectServices}
               onSelectRegions={this.handleSelectRegions}
-              onSubmitFilters={this.handleSubmitFilters} />} />
+              onSubmitFilters={this.handleSubmitFilters}
+              defaultResources={this.state.defaultResources} />} />
         </Switch>
       </div>
     );
