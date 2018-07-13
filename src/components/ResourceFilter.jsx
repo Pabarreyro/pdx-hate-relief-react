@@ -24,7 +24,7 @@ function ResourceFilter(props) {
         <div>
           <div className="connect-header">
             <h1>Helping Portland heal from hate</h1>
-            <p>Connect with organizations across Potland who are helping communities heal from and prevent hate crimes.</p>
+            <p>Connect with organizations across Portland who are helping communities heal from and prevent hate crimes.</p>
           </div>
           <div>
             <Row>
