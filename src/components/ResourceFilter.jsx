@@ -36,7 +36,8 @@ function ResourceFilter(props) {
                   name="communities"
                   value={props.selectedCommunities}
                   onChange={props.onSelectCommunities}
-                  options={props.communities}>
+                  options={props.communities}
+                  multi={true}>
                 </Select>
               </Col>
               <Col md={3}>
@@ -47,7 +48,8 @@ function ResourceFilter(props) {
                   name="services"
                   value={props.selectedServices}
                   onChange={props.onSelectServices}
-                  options={props.services}>
+                  options={props.services}
+                  multi={true}>
                 </Select>
               </Col>
               <Col md={3}>
@@ -58,7 +60,8 @@ function ResourceFilter(props) {
                   name="regions"
                   value={props.selectedRegions}
                   onChange={props.onSelectRegions}
-                  options={props.regions}>
+                  options={props.regions}
+                  multi={true}>
                 </Select>
               </Col>
               <Col md={3}>
