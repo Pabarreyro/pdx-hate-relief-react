@@ -62,7 +62,7 @@ function ResourceFilter(props) {
                 </Select>
               </Col>
               <Col md={3}>
-                <Button onClick={onSubmitFilters}>Find Resources</Button>
+                <Button onClick={props.onSubmitFilters}>Find Resources</Button>
               </Col>
             </Row>
           </div>
