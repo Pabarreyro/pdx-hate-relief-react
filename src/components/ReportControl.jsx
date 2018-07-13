@@ -57,6 +57,7 @@ ReportControl.propTypes = {
   newReport : PropTypes.bool,
   currentReportSection: PropTypes.number,
   onStartReport : PropTypes.func,
+  onCancelReport : PropTypes.func,
   onAdvanceSection : PropTypes.func,
   onPreviousSection : PropTypes.func
 };
