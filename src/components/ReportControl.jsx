@@ -12,7 +12,7 @@ function ReportControl(props) {
               <h1>About Me</h1>
               <div>
                 <Button onClick={props.onCancelReport}>Cancel</Button>
-                <Button onClick={props.onAdvanceSection}>Save & Continue</Button>
+                <Button onClick={props.onNextSection}>Save & Continue</Button>
               </div>
             </div>
           ) :
@@ -22,7 +22,7 @@ function ReportControl(props) {
               <div>
                 <Button onClick={props.onCancelReport}>Cancel</Button>
                 <Button onClick={props.onPreviousSection}>Back</Button>
-                <Button onClick={props.onAdvanceSection}>Save & Continue</Button>
+                <Button onClick={props.onNextSection}>Save & Continue</Button>
               </div>
             </div>
           ) :
@@ -32,7 +32,7 @@ function ReportControl(props) {
               <div>
                 <Button onClick={props.onCancelReport}>Cancel</Button>
                 <Button onClick={props.onPreviousSection}>Back</Button>
-                <Button onClick={props.onAdvanceSection}>Save & Continue</Button>
+                <Button onClick={props.onNextSection}>Save & Continue</Button>
               </div>
             </div>
           ) :
@@ -42,7 +42,7 @@ function ReportControl(props) {
               <div>
                 <Button onClick={props.onCancelReport}>Cancel</Button>
                 <Button onClick={props.onPreviousSection}>Back</Button>
-                <Button onClick={props.onAdvanceSection}>Save & Continue</Button>
+                <Button onClick={props.onNextSection}>Save & Continue</Button>
               </div>
             </div>
           ) :
@@ -58,7 +58,7 @@ ReportControl.propTypes = {
   currentReportSection: PropTypes.number,
   onStartReport : PropTypes.func,
   onCancelReport : PropTypes.func,
-  onAdvanceSection : PropTypes.func,
+  onNextSection : PropTypes.func,
   onPreviousSection : PropTypes.func
 };
 

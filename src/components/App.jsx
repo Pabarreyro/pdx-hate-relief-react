@@ -89,8 +89,8 @@ class App extends React.Component {
     };
     this.handleStartReport = this.handleStartReport.bind(this);
     this.handleCancelReport = this.handleCancelReport.bind(this);
-    this.handlePreviousReportSection = this.handlePreviousReportSection.bind(this);
-    this.handleAdvanceReportSection = this.handleAdvanceReportSection.bind(this);
+    this.handlePreviousSection = this.handlePreviousSection.bind(this);
+    this.handleNextSection = this.handleNextSection.bind(this);
     this.handleSelectCommunities = this.handleSelectCommunities.bind(this);
     this.handleSelectServices = this.handleSelectServices.bind(this);
     this.handleSelectRegions = this.handleSelectRegions.bind(this);
@@ -111,7 +111,7 @@ class App extends React.Component {
     this.setState({currentReportSection : newCurrentSection});
   }
 
-  handleAdvanceReportSection() {
+  handleNextSection() {
     let newCurrentSection = this.state.currentReportSection + 1;
     this.setState({currentReportSection : newCurrentSection});
   }
@@ -159,7 +159,7 @@ class App extends React.Component {
               onStartReport={this.handleStartReport}
               onCancelReport={this.handleCancelReport}
               onPreviousSection={this.handlePreviousSection}
-              onAdvanceSection={this.handleAdvanceReportSection} />} />
+              onNextSection={this.handleNextSection} />} />
           <Route path='/connect' render={() =>
             <ConnectControl
               resources={this.state.masterResources}
