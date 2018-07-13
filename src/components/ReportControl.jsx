@@ -6,6 +6,7 @@ function ReportControl(props) {
 
   return(
     <div>
+      // Refactor, rendering FormSections w/ props;
       { props.newReport ?
         (props.currentReportSection === 1) ? (
             <div>
