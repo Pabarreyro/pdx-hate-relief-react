@@ -83,7 +83,8 @@ class App extends React.Component {
       ],
       selectedCommunities: '',
       selectedServices: '',
-      selectedRegions: ''
+      selectedRegions: '',
+      defaultResources: true
     };
     this.handleStartReport = this.handleStartReport.bind(this);
     this.handleSelectCommunities = this.handleSelectCommunities.bind(this);
@@ -141,7 +142,7 @@ class App extends React.Component {
               onSelectCommunities={this.handleSelectCommunities}
               onSelectServices={this.handleSelectServices}
               onSelectRegions={this.handleSelectRegions}
-              onsubmitFilters={this.handleSubmitFilters} />} />
+              onSubmitFilters={this.handleSubmitFilters} />} />
         </Switch>
       </div>
     );
