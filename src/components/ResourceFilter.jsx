@@ -62,7 +62,7 @@ function ResourceFilter(props) {
                 </Select>
               </Col>
               <Col md={3}>
-                <Button>Find Resources</Button>
+                <Button onClick={onSubmitFilters}>Find Resources</Button>
               </Col>
             </Row>
           </div>
@@ -81,7 +81,8 @@ ResourceFilter.propTypes = {
   selectedRegions: PropTypes.string,
   onSelectCommunities: PropTypes.func,
   onSelectServices: PropTypes.func,
-  onSelectRegions: PropTypes.func
+  onSelectRegions: PropTypes.func,
+  onSubmitFilters: PropTypes.func
 };
 
 export default ResourceFilter;
