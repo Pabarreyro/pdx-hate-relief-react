@@ -12,7 +12,8 @@ function ConnectControl(props) {
         services={props.services}
         onSelectCommunities={props.onSelectCommunities}
         onSelectServices={props.onSelectServices}
-        onSelectRegions={props.onSelectRegions}/>
+        onSelectRegions={props.onSelectRegions}
+        onSubmitFilters={this.handleSubmitFilters}/>
     </div>
   );
 }
@@ -27,6 +28,7 @@ ConnectControl.propTypes = {
   selectedRegions: PropTypes.string,
   onSelectCommunities: PropTypes.func,
   onSelectServices: PropTypes.func,
-  onSelectRegions: PropTypes.func
+  onSelectRegions: PropTypes.func,
+  onSubmitFilters: PropTypes.func
 };
 export default ConnectControl;
