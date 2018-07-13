@@ -107,6 +107,10 @@ class App extends React.Component {
     this.setState({ selectedCommunities: selectedCommunities.value }, this.consoleLogState);
   }
 
+  handleSubmitFilters() {
+    this.setState({ defaultResources: false });
+  }
+
   consoleLogState() {
     console.log(this.state.selectedRegions);
     console.log(this.state.selectedServices);
@@ -136,7 +140,8 @@ class App extends React.Component {
               regions={this.state.regions}
               onSelectCommunities={this.handleSelectCommunities}
               onSelectServices={this.handleSelectServices}
-              onSelectRegions={this.handleSelectRegions} />} />
+              onSelectRegions={this.handleSelectRegions}
+              onsubmitFilters={this.handleSubmitFilters} />} />
         </Switch>
       </div>
     );
